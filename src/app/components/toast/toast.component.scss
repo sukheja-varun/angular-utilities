@@ -1,0 +1,18 @@
+.toast-container {
+    .toast-item {
+      position: fixed;
+      width: 400px;
+      height: 80px; // NOTE: Height is dynamic and overridden by ts and html file
+      bottom: 80px; // NOTE: Position is dynamic and overridden by ts and html file
+      border-radius: 4px;
+      border-left: 5px solid;
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+      animation-name: fadeIn;
+      animation-duration: 1s;
+      z-index: 1031;
+      .toast-icon {
+        font-size: 40px;
+      }
+    }
+  }
+  

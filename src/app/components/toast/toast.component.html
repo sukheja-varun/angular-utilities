@@ -1,0 +1,17 @@
+<div class="toast-container">
+    <div *ngFor="let toastItem of toastList; let i=index" class="row bg-white toast-item {{getCssClass(toastItem)}}"
+      [style.bottom.px]="(i+1)*(toastHeightInPx + toastGapInPx)" [style.height.px]="toastHeightInPx">
+      <div class="col-2 d-flex align-items-center justify-content-center">
+        <span class="toast-icon {{getIcon(toastItem)}}"></span>
+      </div>
+      <div class="col-9 ">
+        <div class="title font-l font-weight-bold mt-2">{{toastItem.title}}</div>
+        <div class="message">{{toastItem.message}}</div>
+      </div>
+      <div class="col-1 d-flex align-items-center justify-content-center">
+        <button (click)="onRemoveToast(i)" type="button" class="close" aria-label="Close">
+          <i class="icon-close font-l"></i>
+        </button>
+      </div>
+    </div>
+  </div>
