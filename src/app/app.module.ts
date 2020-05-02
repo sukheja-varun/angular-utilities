@@ -9,6 +9,7 @@ import { NoInternetComponent } from './components/no-internet/no-internet.compon
 import { HomeComponent } from './components/home/home.component';
 import { DateExtensionComponent } from './components/date-extension/date-extension.component';
 import { ToastComponent } from './components/toast/toast.component';
+import { ToastDemoComponent } from './components/toast-demo/toast-demo.component';
 
 /**
  * Import specific languages to avoid importing everything
@@ -27,7 +28,8 @@ export function getHighlightLanguages() {
     NoInternetComponent,
     HomeComponent,
     DateExtensionComponent,
-    ToastComponent
+    ToastComponent,
+    ToastDemoComponent
   ],
   imports: [
     BrowserModule,
