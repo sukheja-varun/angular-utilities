@@ -13,7 +13,8 @@ export class ToastComponent implements OnInit {
 
 
   toastList = [];
-  clearToastTimeInSec = 5;
+  readonly clearToastTimeInSec = 5;
+  readonly ToastType = ToastType;
   toastSubscription: Subscription;
 
   // Configures each Toast's height and bottom position
@@ -75,55 +76,7 @@ export class ToastComponent implements OnInit {
     this.toastList = [];
   }
 
-  /**
-   * @description It gives the css class corresponding to Toast Type
-   *
-   * @param {ToastI} toast
-   * @returns
-   * @memberof ToastComponent
-   */
-  getCssClass(toast: ToastI) {
-    if (!toast) {
-      return;
-    }
-    switch (toast.type) {
-      case ToastType.SUCCESS:
-        return 'border-success';
-      case ToastType.ERROR:
-        return 'border-danger';
-      case ToastType.INFO:
-        return 'border-info';
-      case ToastType.WARNING:
-        return 'border-warning';
-    }
-  }
-
-  /**
-   * @description It gives the icon class and icon color to be displayed
-   *
-   * @param {ToastI} toast
-   * @returns
-   * @memberof ToastComponent
-   */
-  getIcon(toast: ToastI) {
-    if (!toast) {
-      return;
-    }
-    switch (toast.type) {
-      case ToastType.SUCCESS:
-        return 'icon-success text-success';
-      case ToastType.ERROR:
-        return 'icon-error text-danger';
-      case ToastType.INFO:
-        return 'icon-info text-info';
-      case ToastType.WARNING:
-        return 'icon-warning text-warning';
-    }
-  }
-
   ngOnDestroy(): void {
     this.toastSubscription.unsubscribe();
   }
-
-
 }
