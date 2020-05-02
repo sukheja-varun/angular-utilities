@@ -1,1 +1,78 @@
-<p>date-extension works!</p>
+<h1>Demo of Date Extension</h1>
+<p>
+  We have added a file (date.extension.ts) to this project, which uses
+  prototypal inheritance to add new functionalities to JS Date object.
+</p>
+
+<!-- clone demo -->
+<h3>Demo1: clone()</h3>
+<p>
+  Here we will be using the new <b>clone()</b> method to clone an existing date
+  object.
+</p>
+<pre><code [highlight]="codeSnippet1"  [lineNumbers]="true"></code></pre>
+
+<!-- setStartHours demo -->
+<h3>Demo2: setStartHours()</h3>
+<p>
+  It mutates the date object and sets the time (HH:mm:ss.SSS) to start time of
+  the day i.e. 00:00:00.000
+</p>
+<pre><code [highlight]="codeSnippet2"  [lineNumbers]="true"></code></pre>
+
+<!-- setEndHours demo -->
+<h3>Demo3: setEndHours()</h3>
+<p>
+  It mutates the date object and sets the time (HH:mm:ss.SSS) to end time of the
+  day i.e. 23:59:59.999
+</p>
+<pre><code [highlight]="codeSnippet3"  [lineNumbers]="true"></code></pre>
+
+<!-- addDays demo -->
+<h3>Demo4: addDays()</h3>
+<p>
+  It adds the number of days given as function argument to the date object and
+  returns the new date formed
+</p>
+<pre><code [highlight]="codeSnippet4"  [lineNumbers]="true"></code></pre>
+
+<!-- isToday demo -->
+<h3>Demo5: isToday()</h3>
+<p>
+  It checks if calendar date(DD:MM:YYYY) of current date object is today date
+</p>
+<pre><code [highlight]="codeSnippet5"  [lineNumbers]="true"></code></pre>
+
+<!-- compareDate demo -->
+<h3>Demo6: compareDate()</h3>
+<p>
+  It compare date object (date and time) with the date in function argument.
+</p>
+<ul>
+  <li>
+    returns -1 if currentDate (date and time) is smaller then argument date
+    object
+  </li>
+  <li>returns 0 if currentDate (date and time) equals argument date object</li>
+  <li>
+    returns 1 if currentDate (date and time) is larger then argument date object
+  </li>
+</ul>
+
+<pre><code [highlight]="codeSnippet6"  [lineNumbers]="true"></code></pre>
+
+<!-- compareCalendar demo -->
+<h3>Demo7: compareCalendar()</h3>
+<p>
+  It compare date object (DD:MM:YYYY) with the date in function argument.
+</p>
+<ul>
+  <li>
+    returns -1 if currentDate (DD:MM:YYYY) is smaller then argument date object
+  </li>
+  <li>returns 0 if currentDate (DD:MM:YYYY) equals argument date object</li>
+  <li>
+    returns 1 if currentDate (DD:MM:YYYY) is larger then argument date object
+  </li>
+</ul>
+<pre><code [highlight]="codeSnippet7"  [lineNumbers]="true"></code></pre>
