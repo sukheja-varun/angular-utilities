@@ -44,3 +44,36 @@
 <div>'INR' | currencySymbol => {{ "INR" | currencySymbol }}</div>
 <div>'USD' | currencySymbol => {{ "USD" | currencySymbol }}</div>
 <div>'BRL' | currencySymbol => {{ "BRL" | currencySymbol }}</div>
+
+<!-- lodashGet  -->
+<h3>Demo4: lodashGet pipe</h3>
+<p>
+  This is a wrapper over <b>lodash get()</b> method. Gets the value at path of
+  object. If the resolved value is undefined, the defaultValue is returned in
+  its place. To read official docs of click <a
+    href="https://lodash.com/docs/4.17.15#get"
+    target="_blank"
+  >
+    lodash.get
+  </a>
+</p>
+<ul>
+  <li>object (Object): The object to query.</li>
+  <li>path (Array|string): The path of the property to get.</li>
+  <li>[defaultValue] (*): The value returned for undefined resolved values.</li>
+</ul>
+<div>
+  original object (<b>lodashGetObject</b>) => {{ lodashGetObject | json }}
+</div>
+<div>
+  lodashGetObject | lodashGet: "a[0].b.c" =>
+  {{ lodashGetObject | lodashGet: "a[0].b.c" }}
+</div>
+<div>
+  lodashGetObject | lodashGet: ['a', '0', 'b', 'c'] =>
+  {{ lodashGetObject | lodashGet: ["a", "0", "b", "c"] }}
+</div>
+<div>
+  lodashGetObject | lodashGet: "a.b.c":"default" =>
+  {{ lodashGetObject | lodashGet: "a.b.c":"default" }}
+</div>

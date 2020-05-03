@@ -14,6 +14,7 @@ import { CamelCaseToWordsPipe } from './pipes/camel-case-to-words.pipe';
 import { PipesDemoComponent } from './components/pipes-demo/pipes-demo.component';
 import { ReplaceCharacterPipe } from './pipes/replace-character.pipe';
 import { CurrencySymbolPipe } from './pipes/currency-symbol.pipe';
+import { LodashGetPipe } from './pipes/lodash-get.pipe';
 
 /**
  * Import specific languages to avoid importing everything
@@ -37,7 +38,8 @@ export function getHighlightLanguages() {
     CamelCaseToWordsPipe,
     PipesDemoComponent,
     ReplaceCharacterPipe,
-    CurrencySymbolPipe
+    CurrencySymbolPipe,
+    LodashGetPipe
   ],
   imports: [
     BrowserModule,
