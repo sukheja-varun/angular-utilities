@@ -10,6 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 import { DateExtensionComponent } from './components/date-extension/date-extension.component';
 import { ToastComponent } from './components/toast/toast.component';
 import { ToastDemoComponent } from './components/toast-demo/toast-demo.component';
+import { CamelCaseToWordsPipe } from './pipes/camel-case-to-words.pipe';
+import { PipesDemoComponent } from './components/pipes-demo/pipes-demo.component';
 
 /**
  * Import specific languages to avoid importing everything
@@ -29,7 +31,9 @@ export function getHighlightLanguages() {
     HomeComponent,
     DateExtensionComponent,
     ToastComponent,
-    ToastDemoComponent
+    ToastDemoComponent,
+    CamelCaseToWordsPipe,
+    PipesDemoComponent
   ],
   imports: [
     BrowserModule,
