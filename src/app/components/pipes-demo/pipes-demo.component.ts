@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PipesDemoComponent implements OnInit {
   camelCaseString='thisIsAString';
+  replaceCharString='this_is_a_string';
 
   constructor() { }
 

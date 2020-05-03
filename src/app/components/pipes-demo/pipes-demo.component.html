@@ -1,6 +1,36 @@
 <h1>Demo of various Pipes</h1>
 
+<!-- camelCaseToWords  -->
 <h3>Demo1: camelCaseToWords pipe</h3>
-<p>It converts a string in camel case to string of words separated by spaces.</p>
+<p>
+  It converts a string in camel case to string of words separated by spaces.
+</p>
 <div>original string => {{ camelCaseString }}</div>
 <div>string after pipe => {{ camelCaseString | camelCaseToWords }}</div>
+
+<!-- replaceCharacter -->
+<h3>Demo2: replaceCharacter pipe</h3>
+<p>
+  It is used to replace a character with any other character.
+</p>
+<ul>
+  <li>@param (string) value</li>
+  <li>
+    @param (string) [toReplace='_'] the character to be replaced // default
+    replaces '_' (underscore)
+  </li>
+  <li>
+    @param (string) [replaceWith=' '] the character to be replaced with //
+    by-default it is replaced with blank space
+  </li>
+</ul>
+
+<div>original string => {{ replaceCharString }}</div>
+<div>
+  string after pipe (replaceCharString | replaceCharacter) =>
+  {{ replaceCharString | replaceCharacter }}
+</div>
+<div>
+  string after pipe (replaceCharString | replaceCharacter: "_":"~*~") =>
+  {{ replaceCharString | replaceCharacter: "_":"~*~" }}
+</div>
