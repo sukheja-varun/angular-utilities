@@ -34,3 +34,13 @@
   string after pipe (replaceCharString | replaceCharacter: "_":"~*~") =>
   {{ replaceCharString | replaceCharacter: "_":"~*~" }}
 </div>
+
+<!-- currencySymbol  -->
+<h3>Demo3: currencySymbol pipe</h3>
+<p>
+  It gives the currency symbol for the given currency code like ₹ for INR and $
+  for USD.
+</p>
+<div>'INR' | currencySymbol => {{ "INR" | currencySymbol }}</div>
+<div>'USD' | currencySymbol => {{ "USD" | currencySymbol }}</div>
+<div>'BRL' | currencySymbol => {{ "BRL" | currencySymbol }}</div>

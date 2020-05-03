@@ -13,6 +13,7 @@ import { ToastDemoComponent } from './components/toast-demo/toast-demo.component
 import { CamelCaseToWordsPipe } from './pipes/camel-case-to-words.pipe';
 import { PipesDemoComponent } from './components/pipes-demo/pipes-demo.component';
 import { ReplaceCharacterPipe } from './pipes/replace-character.pipe';
+import { CurrencySymbolPipe } from './pipes/currency-symbol.pipe';
 
 /**
  * Import specific languages to avoid importing everything
@@ -35,7 +36,8 @@ export function getHighlightLanguages() {
     ToastDemoComponent,
     CamelCaseToWordsPipe,
     PipesDemoComponent,
-    ReplaceCharacterPipe
+    ReplaceCharacterPipe,
+    CurrencySymbolPipe
   ],
   imports: [
     BrowserModule,
